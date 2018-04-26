@@ -1,3 +1,10 @@
+# Used Technologies 
+Angular 5, NewsAPI, Bootstrap 4, Bootswatch and Awesome-fonts  
+# Api link
+https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=33ba70d6367648b49a76910dfad62ad4
+
+# To change Bootswatch theme 
+  in style.scss change the import url sketchy part to any you would like.
 # NewsApiTask
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
