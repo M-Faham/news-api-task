@@ -1,0 +1,31 @@
+<div *ngFor="let article of news">  <!--Loop throgh the array -->
+  <div *ngIf="(index == news.indexOf(article))"> <!-- match an opject with the index-->
+
+    <div class="jumbotron jumbotron-fluid">
+      
+      <div class="container">
+
+        <h1 class="display-3">{{article.title}}</h1>
+
+        <img class="img-fluid" src="{{article.urlToImage}}"> 
+
+        <p class="lead">By {{article.author}}</p> <!-- Sometimes the author returns NULL-->
+
+        <p class="lead">{{article.publishedAt| date:"longDate"}} at {{article.publishedAt| date:"shortTime"}}</p>  <!-- Pipes were used to make the date more readable-->
+
+        <hr class="my-2">
+        <p>The Detail:</p>
+        <p> {{article.description}}</p>
+        
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="{{article.url}}" role="button">Go to source</a>
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- <iframe class="col-12 " src="{{article.url}}"></iframe> -->
+    <!-- I tried to use iframe but it throws error "unsafe value used in a resource URL context" -->
+  </div>
+</div>

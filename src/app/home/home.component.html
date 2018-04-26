@@ -1,0 +1,27 @@
+<div class="jumbotron ">
+    <h1 class="display-3">The Headlines</h1>
+    <p class="lead">24/7 News covarage</p>
+</div>
+
+<div class="row col-md-12">
+    <div class="col-md-4 pb-3 " *ngFor="let article of news; index as ind">
+
+        <div class="card h-100">
+
+            <a href="{{article.url}}">
+                <img class="card-img-top" src="{{article.urlToImage || imgAlt}}" alt="{{article.title}}" />
+            </a>
+
+            <div class="card-body">
+
+                <h3 (click)="onSelect(ind)" class="card-title">{{article.title}}</h3>
+
+                
+            </div>
+
+            <p class="card-footer text-muted">{{article.publishedAt | date:"longDate"}} </p>
+            <a (click)="onSelect(ind)" class="btn btn-primary text-light">See More</a>
+        </div>
+    </div>
+
+</div>
